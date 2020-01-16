@@ -6,6 +6,8 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const axios = require("axios");
 
+var port = process.env.PORT || 9000;
+
 // crio um servidor express
 const app = express();
 
@@ -72,4 +74,4 @@ app.post("/add", (req, res) => {
 });
 
 // o servidor irá rodar dentro da porta 9000
-app.listen(9000, () => console.log("Express started at http://localhost:9000"));
+app.listen(port, () => console.log("Express started at http://localhost:9000"));
